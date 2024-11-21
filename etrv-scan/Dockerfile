@@ -5,4 +5,7 @@ RUN pip3 install 'git+https://github.com/AdamStrojek/libetrv.git'
 COPY ./run.sh .
 RUN chmod +x run.sh
 
-CMD ["/app/run.sh"]
+ENTRYPOINT ["tail"]
+CMD ["-f","/dev/null"]
+
+#CMD ["/app/run.sh"]
